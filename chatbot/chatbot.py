@@ -3,7 +3,7 @@ import os
 
 def main():
     # Replace 'YOUR_OPENAI_API_KEY' with your actual OpenAI API key
-    openai.api_key = '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'
+    openai.api_key = os.getenv("openai.api_key")
 
     print("Welcome to the terminal chatbot! Type 'exit' to end the conversation.")
 
