@@ -20,7 +20,7 @@ def send_link():
     msg = MIMEMultipart()
     msg['From'] = EMAIL_ADDRESS
     msg['To'] = RECIPIENT_EMAIL
-    msg['Subject'] = "Your Daily Link"
+    msg['Subject'] = "Your Daily Link for writing Journal"
 
     # Create the body of the email
     link = "https://chatgpt.com/g/g-6749268985ac8191b2e72f40f9e64f08-journal*"
