@@ -27,7 +27,6 @@ def main():
                 temperature=0.7
             )
 
-            # Extract response text and print it
             bot_response = response['choices'][0]['message']['content'].strip()
             print(f"Bot: {bot_response}")
         except Exception as e:
