@@ -16,7 +16,7 @@ def main():
             print("Goodbye!")
             break
 
-        # Use OpenAI API to generate a response
+        # Use OpenAI API to generate a responses
         try:
             response = openai.ChatCompletion.create(
                 model="gpt-4o-mini",
