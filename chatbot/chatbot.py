@@ -9,7 +9,7 @@ def main():
     print("Welcome to the terminal chatbot! Type 'exit' to end the conversation.")
 
     while True:
-        # Get user input
+        # Get the input from the user
         user_input = input("You: ")
         
         if user_input.lower() == 'exit':
