@@ -27,7 +27,7 @@ def send_link():
     body = f"Hello! Here is your link for today: {link}\nDate: {datetime.date.today()}"
     msg.attach(MIMEText(body, 'plain'))
 
-    # Sending the email
+    # Sending the email everyday at 8:30 PM
     try:
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
