@@ -2,7 +2,7 @@ import openai
 import os
 
 def main():
-    
+    #Using the OpenAI API to generate custum questsion
     openai.api_key = os.getenv("openai.api_key")
 
     
