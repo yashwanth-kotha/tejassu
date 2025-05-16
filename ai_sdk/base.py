@@ -5,7 +5,7 @@ class AIProvider:
         self.api_key = api_key
         
     def generate_text(self, prompt, max_tokens=500, temperature=0.7):
-        """Generate text based on prompt.
+        """Generate text based on prompt
         
         Args:
             prompt (str): Input prompt
