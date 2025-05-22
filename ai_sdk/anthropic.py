@@ -7,7 +7,7 @@ class AnthropicProvider(AIProvider):
     def __init__(self, api_key=None):
         super().__init__(api_key)
         self.client = anthropic.Anthropic(api_key=self.api_key)
-        self.model = "claude-3-sonnet-20240307"
+        self.model = "claude-3-7-sonnet-latest"
         
     def generate_text(self, prompt, max_tokens=500, temperature=0.7):
         """Generate text using Anthropic Claude.

@@ -3,6 +3,7 @@ from datetime import datetime
 
 # List of journal prompts
 QUESTIONS = [
+    "What is the summary of my day?",  # Added summary question
     "What made you smile today?",
     "What was the most challenging part of your day?",
     "What are you grateful for today?",
@@ -16,7 +17,6 @@ QUESTIONS = [
     "What was a moment of joy today?",
     "What is something you'd like to remember about today?",
     "What did you do today that was meaningful?",
-    "How did your mood change throughout the day?",
     "What is something you're proud of today?",
     "What is something you wish you had done differently?",
     "What is something that made you laugh today?",
@@ -42,11 +42,19 @@ def get_daily_questions(num_questions=5, seed=None):
     else:
         random.seed(seed)
     
-    # Select a subset of questions
-    if num_questions > len(QUESTIONS):
-        num_questions = len(QUESTIONS)
-        
-    selected = random.sample(QUESTIONS, num_questions)
+    # Always include summary question
+    selected = ["What is the summary of my day?"]
+    
+    # Remove summary question from candidates to avoid duplication
+    remaining_questions = [q for q in QUESTIONS if q != "What is the summary of my day?"]
+    
+    # Select additional questions
+    if num_questions > 1:
+        additional_questions = random.sample(
+            remaining_questions, 
+            min(num_questions - 1, len(remaining_questions))
+        )
+        selected.extend(additional_questions)
     
     # Reset random seed
     random.seed(None)
