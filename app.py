@@ -39,7 +39,7 @@ def get_ai_provider():
 ai_provider = get_ai_provider()
 
 # App header
-st.title("📔 Tejassu")
+st.title("📔 Tejassu ")
 st.subheader("Your AI-Enhanced Journal")
 
 # Navigation
