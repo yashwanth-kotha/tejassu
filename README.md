@@ -11,9 +11,10 @@ Tejassu is a personal journaling application that uses AI to help you reflect on
 ## Technical Implementation
 - Built with Streamlit for a user-friendly interface
 - Custom AI SDK wrapper for multiple model providers
-- Local storage for journal entries
+- Local storage for journal entries 
 
 ## Future projection
+- Converting the journal entries to vector database
 - Incorporating Handwritten recognition
 - Audio to text journal entries
 Here is the GUI
